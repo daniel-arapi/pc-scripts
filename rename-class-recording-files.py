@@ -1,3 +1,17 @@
+"""
+Class recordings are downloaded to Class Recordings directory which contains a subdirectory for each class of that year.
+Each class subdirectory contains mp4 video, txt transcription, vm4a audio, and vtt closed captions.
+All of these files need to be renamed to show date and class in a more readable format.
+Example below:
+
+- 'Class Recording'
+  - 'Year 1 - Period 1 - QUR-111 - Applied Grammar and Quran Translation'
+    - GMT20241010-173029_Recording.cc.vtt --> "2024-10-10 - Year 1 - Period 1 - QUR-111 - Applied Grammar and Quran Translation.vtt"
+    - GMT20241010-173029_Recording.m4a --> "2024-10-10 - Year 1 - Period 1 - QUR-111 - Applied Grammar and Quran Translation.vm4a"
+    - GMT20241010-173029_Recording_1920x1080.mp4 --> "2024-10-10 - Year 1 - Period 1 - QUR-111 - Applied Grammar and Quran Translation.mp4"
+    - GMT20241010-173029_RecordingnewChat.txt --> "2024-10-10 - Year 1 - Period 1 - QUR-111 - Applied Grammar and Quran Translation.txt"
+"""
+
 import os
 import re
 from datetime import datetime
