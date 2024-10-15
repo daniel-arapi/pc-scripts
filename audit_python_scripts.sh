@@ -1,5 +1,23 @@
 #!/bin/bash
 
+: '
+This script audits Python scripts in a specified directory and generates a CSV report with details such as:
+
+- Script owner and group
+- Shebang line
+- Git repository status
+- Presence of README and requirements files
+- Python version
+
+Usage:
+    ./audit_python_scripts.sh /path/to/directory
+
+Arguments:
+    /path/to/directory: Directory containing Python scripts to be audited. 
+
+The script excludes directories named "venv" and saves the report to a file named "report.csv" in the current directory.
+'
+
 # Function to determine if a file is tracked in git
 git_check() {
   file_path="$1"
